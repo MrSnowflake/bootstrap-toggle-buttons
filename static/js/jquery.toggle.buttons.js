@@ -223,7 +223,7 @@
           $(this).toggleClass('deactivate');
         },
         activation: function () {
-          return $(this).hasClass('deactivate');
+          return !$(this).hasClass('deactivate');
         },
         setActivation: function (value) {
           if (!value)
