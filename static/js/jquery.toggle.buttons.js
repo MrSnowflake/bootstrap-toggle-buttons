@@ -222,6 +222,15 @@
         toggleActivation: function () {
           $(this).toggleClass('deactivate');
         },
+        activation: function () {
+          return $(this).hasClass('deactivate');
+        },
+        setActivation: function (value) {
+          if (!value)
+            $(this).addClass('deactivate');
+          else
+            $(this).removeClass('deactivate');
+        },
         toggleState: function (skipOnChange) {
           var $input = $(this).find('input');
           $input.attr('checked', !$input.is(':checked')).trigger('change', skipOnChange);
